@@ -7,11 +7,27 @@ export default StyleSheet.create({
         flex: 1,
         paddingHorizontal: 24,
         paddingTop: Constants.statusBarHeight + 20,
+        backgroundColor: '#fff',
     },
     Header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+    },
+    headerPicker: {
+        backgroundColor: '#321da4',
+        width: 160,
+        height: 31,
+        borderRadius: 5,
+        justifyContent: 'center',
+    },
+    headerPickerIcon: {
+        top: -20,
+        right: -140
+
+    },
+    headerPickerText: {
+        color: '#fff'
     },
     HeaderIcon: {
         color: '#312DA4'
@@ -21,19 +37,25 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         color: '#312DA4'
     },
-    Search: {
+    search: {
         alignItems: 'center',
         flexDirection: 'row',
+        position: 'relative',
     },
-
-    SearchInput: {
+    searchInput: {
         marginTop: 20,
-        height: 35,
-        padding: 10,
+        height: 41,
+        paddingLeft: 35,
         width: '100%',
         backgroundColor: '#c9c9c9',
         color: '#fff',
-        borderRadius: 8
+        borderRadius: 8,
+        position: 'relative',
+    },
+    searchInputIcon: {
+        position: 'absolute',
+        bottom: 12,
+        left: 8
     },
     breadcrumb: {
         flexDirection: 'row',
@@ -78,7 +100,7 @@ export default StyleSheet.create({
     },
     Destinations: {
         borderRadius: 8,
-        backgroundColor: '#fff',
+        backgroundColor: '#fafafa',
         marginBottom: 25,
         // marginBottom: 65
     },

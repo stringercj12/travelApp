@@ -48,7 +48,7 @@ export default StyleSheet.create({
         fontSize: 13,
         marginBottom: 20
     },
-    boxCard: {
+    hotelCard: {
         // padding: 15,
         backgroundColor: '#fff',
         justifyContent: 'space-between',
@@ -56,23 +56,23 @@ export default StyleSheet.create({
         flexDirection: 'row',
         borderRadius: 8
     },
-    boxCardImage: {
+    hotelCardImage: {
         backgroundColor: 'tomato',
         // width: '20%',
         // height: 63,
         padding: 15
     },
-    boxCardInfo: {
+    hotelCardInfo: {
         padding: 15,
         // width: '80%',
         // width: '100%',
         // marginLeft: 15
         backgroundColor: 'orange',
     },
-    boxCardInfoTitulo: {
+    hotelCardInfoTitulo: {
 
     },
-    boxCardInfoTexto: {
+    hotelCardInfoTexto: {
 
     },
     search: {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Picker, TextInput, FlatList, Image } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, Feather, Ionicons } from '@expo/vector-icons';
 import styles from './styles';
+import glabalStyles from './../../Config/globalStyles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Category() {
@@ -10,14 +11,21 @@ export default function Category() {
     <View style={styles.container}>
       <View>
         <View style={styles.Header}>
-          <Picker
-            selectedValue={hand}
-            onValueChange={setHand}
-            style={{ width: 160 }}
-            mode="dropdown">
-            <Picker.Item label="Right Hand" value="right" />
-            <Picker.Item label="Left Hand" value="left" />
-          </Picker>
+          <View style={styles.headerPicker}>
+            <Picker
+              selectedValue={hand}
+              onValueChange={setHand}
+              mode="dropdown"
+              style={styles.headerPickerText}>
+              <Picker.Item label="Country" value="" />
+              <Picker.Item label="Brasil" value="Brasil" />
+              <Picker.Item label="EUA" value="EUA" />
+              <Picker.Item label="Alemanha" value="Alemanha" />
+              <Picker.Item label="Japão" value="Japão" />
+              <Picker.Item label="Itália" value="Itália" />
+              <Picker.Item label="Espanha" value="Espanha" />
+            </Picker>
+          </View>
 
           <Text style={styles.HeaderText}>
             Category
@@ -25,8 +33,9 @@ export default function Category() {
         </View>
 
 
-        <View style={styles.Search}>
-          <TextInput style={styles.SearchInput} placeholder="Search" placeholderTextColor="#fff" />
+        <View style={styles.search}>
+          <TextInput style={styles.searchInput} placeholder="Search" placeholderTextColor="#fff" />
+          <Feather style={styles.searchInputIcon} name="search" size={18} color="#000" />
         </View>
       </View>
 
@@ -62,7 +71,7 @@ export default function Category() {
         keyExtractor={item => String(item)}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
-          <View style={styles.Destinations}>
+          <View style={[styles.Destinations, glabalStyles.shadow]}>
             <Image
               style={styles.DestinationsImage}
               source={require('./../../assets/Banff-National-Park2.png')}

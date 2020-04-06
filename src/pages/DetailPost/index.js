@@ -46,13 +46,13 @@ export default function DetailPost() {
                         <Text>View all</Text>
                     </View>
                     <View>
-                        <View style={styles.boxCard}>
-                            <View style={styles.boxCardImage}>
+                        <View style={styles.hotelCard}>
+                            <View style={styles.hotelCardImage}>
                                 {/* <Image source={require('./../../assets/Banff-National-Park2.png')} /> */}
                             </View>
-                            <View style={styles.boxCardInfo}>
-                                <Text style={styles.boxCardInfoTitulo}>Ramada Encore</Text>
-                                <Text style={styles.boxCardInfoTexto}>
+                            <View style={styles.hotelCardInfo}>
+                                <Text style={styles.hotelCardInfoTitulo}>Ramada Encore</Text>
+                                <Text style={styles.hotelCardInfoTexto}>
                                     Etiam facilisis ligula nec velit posuere egestas.
                                 </Text>
                             </View>

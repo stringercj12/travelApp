@@ -3,7 +3,9 @@ import { View, Text, TextInput, FlatList, Image, TouchableOpacity } from 'react-
 import { Feather, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
+
 import styles from './styles';
+import glabalStyles from './../../Config/globalStyles';
 
 export default function Home() {
 
@@ -25,6 +27,7 @@ export default function Home() {
             </View>
             <View style={styles.search}>
                 <TextInput style={styles.searchInput} placeholder="Search" placeholderTextColor="#fff" />
+                <Feather style={styles.searchInputIcon} name="search" size={18} color="#000" />
             </View>
 
             <View style={styles.container2}>
@@ -71,7 +74,7 @@ export default function Home() {
                     keyExtractor={item => String(item)}
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => (
-                        <View style={styles.destinations}>
+                        <View style={[styles.destinations, glabalStyles.shadow]}>
                             <Image
                                 style={styles.destinationsImage}
                                 source={require('./../../assets/Banff-National-Park2.png')}

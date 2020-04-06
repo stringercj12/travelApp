@@ -6,6 +6,7 @@ export default StyleSheet.create({
         flex: 1,
         paddingHorizontal: 24,
         paddingTop: Constants.statusBarHeight + 20,
+        backgroundColor: '#fff'
     },
     header: {
         flexDirection: 'row',
@@ -23,16 +24,22 @@ export default StyleSheet.create({
     search: {
         alignItems: 'center',
         flexDirection: 'row',
+        position: 'relative',
     },
-
     searchInput: {
-        marginTop: 15,
-        height: 45,
-        padding: 12,
+        marginTop: 20,
+        height: 41,
+        paddingLeft: 35,
         width: '100%',
         backgroundColor: '#c9c9c9',
         color: '#fff',
-        borderRadius: 8
+        borderRadius: 8,
+        position: 'relative',
+    },
+    searchInputIcon: {
+        position: 'absolute',
+        bottom: 12,
+        left: 8
     },
     showPost: {
         marginTop: 13,
