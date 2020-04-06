@@ -2,6 +2,7 @@ import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { StyleSheet, View, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -9,6 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 // import { Container } from './styles';
 
 import Login from './pages/Login';
@@ -24,8 +26,28 @@ import DetailPost from './pages/DetailPost';
 import NewPost from './pages/NewPost';
 import Favorites from './pages/Favorites';
 import Follows from './pages/Follows';
+import Settings from './pages/Settings';
+import Hotels from './pages/Hotels';
 
 import { Config } from './Config/tab';
+
+function MyDrawer() {
+    return (
+        <Drawer.Navigator initialRouteName="Settings">
+            <Drawer.Screen
+                name="Settings"
+                component={Settings}
+                options={{ drawerLabel: 'Home' }}
+            />
+            <Drawer.Screen
+                name="Settings"
+                component={Settings}
+                options={{ drawerLabel: 'Home' }}
+            />
+        </Drawer.Navigator>
+    );
+}
+
 
 function MainTabNavigator() {
 
@@ -63,6 +85,8 @@ export default function Routes() {
             <Stack.Screen name="DetailPost" component={DetailPost} options={{ headerShown: false }} />
             <Stack.Screen name="Post" component={Post} options={{ headerShown: false }} />
             <Stack.Screen name="Follows" component={Follows} options={{ headerShown: false }} />
+            <Stack.Screen name="MyDrawer" component={MyDrawer} options={{ headerShown: false }} />
+            <Stack.Screen name="Hotels" component={Hotels} options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 }

@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity, StatusBar } from 'react-native';
+import { View, Image, Text, TouchableOpacity, FlatList } from 'react-native';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
+import globalStyles from '../../Config/globalStyles';
 // StatusBar.setTranslucent(true)
 // import { Container } from './styles';
 
@@ -12,6 +13,10 @@ export default function DetailPost() {
 
     function navigateToback() {
         navigation.goBack();
+    }
+
+    function navigateToHotels() {
+        navigation.navigate('Hotels')
     }
 
 
@@ -28,7 +33,7 @@ export default function DetailPost() {
             <View style={styles.boxText}>
                 <View style={styles.boxHeader}>
                     <Text style={styles.boxHeaderText}>Bali, Indonesia</Text>
-                    <MaterialCommunityIcons name="bookmark-plus-outline" size={28} color="#fff" />
+                    <MaterialCommunityIcons name="bookmark-plus-outline" size={28} color="#3b3b3b" />
                 </View>
 
                 <View>
@@ -42,21 +47,30 @@ export default function DetailPost() {
 
                 <View>
                     <View style={styles.boxHeader}>
-                        <Text>Bali, Indonesia</Text>
-                        <Text>View all</Text>
+                        <Text style={styles.hotelsTitulo}>Bali, Indonesia</Text>
+                        <TouchableOpacity style={styles.hotelsViewAllButton} onPress={navigateToHotels}>
+                            <Text style={styles.hotelsViewAllButtonText}>View All</Text>
+                        </TouchableOpacity>
                     </View>
                     <View>
-                        <View style={styles.hotelCard}>
-                            <View style={styles.hotelCardImage}>
-                                {/* <Image source={require('./../../assets/Banff-National-Park2.png')} /> */}
-                            </View>
-                            <View style={styles.hotelCardInfo}>
-                                <Text style={styles.hotelCardInfoTitulo}>Ramada Encore</Text>
-                                <Text style={styles.hotelCardInfoTexto}>
-                                    Etiam facilisis ligula nec velit posuere egestas.
-                                </Text>
-                            </View>
-                        </View>
+                        <FlatList
+                            data={[1, 2, 3, 4, 5]}
+                            keyExtractor={item => String(item)}
+                            showsVerticalScrollIndicator={false}
+                            renderItem={({ item }) => (
+                                <View style={[styles.hotelCard, globalStyles.shadow]}>
+                                    <View>
+                                        <Image style={styles.hotelCardImage} source={require('./../../assets/Banff-National-Park2.png')} />
+                                    </View>
+                                    <View style={styles.hotelCardInfo}>
+                                        <Text style={styles.hotelCardInfoTitulo}>Ramada Encore</Text>
+                                        <Text style={styles.hotelCardInfoTexto}>
+                                            Etiam facilisis ligula nec velit posuere egestas.
+                                        </Text>
+                                    </View>
+                                </View>
+                            )}
+                        />
                     </View>
                 </View>
             </View>

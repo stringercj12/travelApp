@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, FlatList, Image, TouchableOpacity } from 'react-native';
 import { Feather, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, DrawerActions } from '@react-navigation/native';
 
 
 import styles from './styles';
@@ -11,8 +11,15 @@ export default function Home() {
 
     const navigation = useNavigation();
 
+
     function navigateToPost() {
         navigation.navigate('Post');
+    }
+
+    function navigateToDrawer() {
+        // DrawerActions.openDrawer();
+        // navigation.openDrawer();
+        alert('Este menu ainda não foi implementado');
     }
 
     function navigateToDetailsPost() {
@@ -22,7 +29,9 @@ export default function Home() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Feather style={styles.headerIcon} name="list" size={32} color="#312DA4" />
+                <TouchableOpacity onPress={navigateToDrawer}>
+                    <Feather style={styles.headerIcon} name="list" size={32} color="#312DA4" />
+                </TouchableOpacity>
                 <Text style={styles.headerText}>Home</Text>
             </View>
             <View style={styles.search}>

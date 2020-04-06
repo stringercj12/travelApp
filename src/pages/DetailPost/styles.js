@@ -16,7 +16,7 @@ export default StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
         width: '100%',
-        height: 299,
+        height: 198,
     },
     headerIcon: {
         position: 'absolute',
@@ -25,12 +25,22 @@ export default StyleSheet.create({
         left: 25,
     },
     boxText: {
-        backgroundColor: '#312DA4',
+        backgroundColor: '#fafafa',
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         padding: 24,
-        marginTop: -25
+        marginTop: -25,
+        // flex: 1,
 
+        shadowColor: '#999',
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 6,
+        shadowRadius: 10,
+
+        elevation: 10,
     },
     boxHeader: {
         flexDirection: 'row',
@@ -41,45 +51,60 @@ export default StyleSheet.create({
     boxHeaderText: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#fff'
+        color: '#3b3b3b'
     },
     postText: {
         color: '#888888',
-        fontSize: 13,
+        fontSize: 16,
         marginBottom: 20
     },
+    hotelsTitulo: {
+        color: '#3b3b3b',
+        fontSize: 18,
+        fontWeight: 'bold'
+    },
+    hotelsViewAllButton: {
+
+    },
+    hotelsViewAllButtonText: {
+        color: '#737380',
+        fontSize: 15
+    },
     hotelCard: {
-        // padding: 15,
         backgroundColor: '#fff',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
-        borderRadius: 8
+        borderRadius: 8,
+        padding: 15,
+        marginBottom: 15,
+        borderWidth: 0.25,
+        borderColor: '#737380'
     },
     hotelCardImage: {
-        backgroundColor: 'tomato',
-        // width: '20%',
-        // height: 63,
-        padding: 15
+        // backgroundColor: 'tomato',
+        width: 56,
+        height: 63,
+        // padding: 15
     },
     hotelCardInfo: {
-        padding: 15,
-        // width: '80%',
-        // width: '100%',
-        // marginLeft: 15
-        backgroundColor: 'orange',
+        width: 220,
+        height: 62,
+        marginLeft: 15
     },
     hotelCardInfoTitulo: {
-
+        fontSize: 15,
+        color: '#000',
+        fontWeight: 'bold'
     },
     hotelCardInfoTexto: {
-
+        fontSize: 12,
+        color: '#888888',
     },
     search: {
         alignItems: 'center',
         flexDirection: 'row',
     },
-
     searchInput: {
         marginTop: 20,
         height: 35,
