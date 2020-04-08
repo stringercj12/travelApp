@@ -5,9 +5,9 @@ Let's Travel - App para estudo com React native
 
 Esse projeto foi criado desenvolvido com as seguintes tecnologias:
 
-React
-React Native
-Expo
+React <br />
+React Native <br />
+Expo <br />
 
 # Layout
 
