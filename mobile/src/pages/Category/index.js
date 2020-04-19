@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Picker, TextInput, FlatList, Image } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons';
-import Feather from 'react-native-vector-icons';
-import Ionicons from 'react-native-vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 import glabalStyles from './../../Config/globalStyles';
 import { TouchableOpacity } from 'react-native-gesture-handler';

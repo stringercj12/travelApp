@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons';
-import Ionicons from 'react-native-vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import styles from './styles';
 import globalStyles from './../../Config/globalStyles';

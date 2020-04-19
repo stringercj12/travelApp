@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
+import AsyncStorage from '@react-native-community/async-storage';
 
 import { styles } from "./styles";
 import image from './../../assets/fundo.png';
@@ -13,6 +14,15 @@ export default function Start({ navigation }) {
         navigation.navigate('Register');
     }
 
+	
+	useEffect(() => {
+    AsyncStorage.getItem('id').then(id => {
+      if (id) {
+        navigation.navigate('Home', { id });
+      }
+    });
+  }, []);
+	
     return (
         <ImageBackground source={image} style={styles.image}>
             <View style={styles.Container}>

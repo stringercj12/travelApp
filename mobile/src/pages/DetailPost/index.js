@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity, FlatList } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons';
-import Ionicons from 'react-native-vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';

@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, Image, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Ionicons from 'react-native-vector-icons';
-import MaterialCommunityIcons from 'react-native-vector-icons';
-import Feather from 'react-native-vector-icons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
 
 import styles from './styles';
 

@@ -69,6 +69,7 @@ export default StyleSheet.create({
     paddingHorizontal: 40,
     justifyContent: 'center',
     alignItems: 'center',
+	zIndex: 10
   },
   FormButtomText: {
     color: '#fff'

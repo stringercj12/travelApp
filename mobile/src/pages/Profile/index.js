@@ -50,8 +50,8 @@ export default function Profile() {
             </View>
 
             <View style={styles.detailsProfile}>
-                <Text style={styles.detailsProfileName}>{name}</Text>
-                <Text style={styles.detailsProfileEmail}>{email}</Text>
+                <Text style={styles.detailsProfileName}>Jefferson Ferreira {name}</Text>
+                <Text style={styles.detailsProfileEmail}>jefferson14489@gmail.com {email}</Text>
             </View>
             <View style={styles.detailsProfileStatus}>
                 <View style={styles.detailsProfileStatusFollowing}>

@@ -7,7 +7,6 @@ Esse projeto foi criado desenvolvido com as seguintes tecnologias:
 
 React <br />
 React Native <br />
-Expo <br />
 React navigation - usando Bottom Tabs, Stack, Drawer <br />
 Axios <br />
 
