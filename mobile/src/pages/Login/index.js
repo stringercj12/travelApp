@@ -8,7 +8,7 @@ import api from './../../services/api';
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState('jefferson14489@gmail.com');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('123');
 
 
   useEffect(() => {
@@ -26,15 +26,20 @@ export default function Login({ navigation }) {
 
   async function navigateToHome() {
     try {
-      const response = await api.post('auth', { email });
+      // const response = await api.post('auth', { email });
 
-      console.log(response.data);
-      // Alert.alert(email)
-      const { id } = response.data;
+      // console.log(response.data);
+      // // Alert.alert(email)
+      // const { id } = response.data;
 
-      await AsyncStorage.setItem('id', JSON.stringify(id));
+      // await AsyncStorage.setItem('id', JSON.stringify(id));
 
-      navigation.navigate('Home');
+      if (email == 'jefferson14489@gmail.com' & password == '123') {
+        navigation.navigate('Home');
+      } else {
+        Alert.alert('E-mail ou senha inválidos')
+      }
+
     } catch (error) {
       Alert.alert('Algo deu errado, tente novamente');
       console.log(error)

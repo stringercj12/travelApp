@@ -20,7 +20,7 @@ export default function Forgot({ navigation }) {
                 <View style={styles.FormContainer}>
                     <TextInput
                         style={styles.FormInput}
-                        placeholder="Phone Number"
+                        placeholder="Informe seu e-mail"
                         autoCapitalize="none"
                         autoFocus={false}
                         autoCorrect={false}
