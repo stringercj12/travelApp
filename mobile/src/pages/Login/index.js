@@ -71,7 +71,7 @@ export default function Login({ navigation }) {
             autoFocus={false}
             autoCapitalize="none"
             autoCorrect={false}
-            onChangeText={e => setPassword(e.target.value)}
+            onChangeText={text => setPassword(text)}
           />
           <TouchableOpacity onPress={navigateToForgot} style={styles.forgot}>
             <Text style={styles.forgotText}>Forgot password ?</Text>
