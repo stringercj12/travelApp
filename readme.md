@@ -9,6 +9,7 @@ React <br />
 React Native <br />
 React navigation - usando Bottom Tabs, Stack, Drawer <br />
 Axios <br />
+Nest.js <br />
 
 
 # Layout
