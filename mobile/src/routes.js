@@ -1,5 +1,7 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+// import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 // import { StyleSheet, View, Text } from 'react-native';
@@ -7,7 +9,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 // import { LinearGradient } from 'react-native-linear-gradient';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 // import { Container } from './styles';
