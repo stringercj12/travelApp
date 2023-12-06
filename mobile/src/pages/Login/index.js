@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity, ImageBackground, Alert } from 'react-native';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './styles';
 import image from './../../assets/fundo.png';
 
